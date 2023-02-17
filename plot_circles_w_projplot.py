@@ -16,7 +16,7 @@ def plot_circle(rot, r, radec=False, fmt="--k"):
   """
 
   theta = np.linspace(0, 2*np.pi, 1000)
-  lon = rot + r*np.cos(theta)
-  lat = rot + r*np.sin(theta)
+  lon = rot[0] + r*np.cos(theta)
+  lat = rot[1] + r*np.sin(theta)
   hp.projplot(lon, lat, fmt=fmt, lonlat=True)
   return lon, lat
