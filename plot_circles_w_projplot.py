@@ -2,7 +2,7 @@ import numpy as np
 import healpy as hp
 from astropy.coordinates import SkyCoord
 
-def plot_circle(rot, r, radec=False):
+def plot_circle(rot, r, radec=False, fmt="--k"):
   """
   v1.1 mft 12 07 23
 
@@ -18,5 +18,5 @@ def plot_circle(rot, r, radec=False):
   theta = np.linspace(0, 2*np.pi, 1000)
   lon = rot + r*np.cos(theta)
   lat = rot + r*np.sin(theta)
-  hp.projplot(lon, lat, lonlat=True)
+  hp.projplot(lon, lat, fmt=fmt, lonlat=True)
   return lon, lat
