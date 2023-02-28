@@ -1,6 +1,6 @@
 import numpy as np
 import healpy as hp
-from miscellaneous_functions import Tthermo_factor
+from .miscellaneous_functions import Tthermo_factor
 Jy = 1e-26
 
 def aperture_photometry(map, freq, cal, pix_object, pix_BG, units="K"):
